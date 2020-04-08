@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".NcdcTwitterActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/tool_bar"
+                app:titleMarginStart="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/standard_view_padding"
+                android:background="@color/colorPrimaryDark"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:logo="@drawable/ic_https_black_24dp"
+                app:navigationIcon="@drawable/ic_close_black_24dp"
+                app:subtitleTextAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Subtitle"
+                app:subtitleTextColor="@android:color/white"
+                app:title="@string/repsorp"
+                app:titleMargin="0dp"
+                app:titleTextAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Title"
+                app:titleTextColor="@android:color/white" />
+
+            <WebView
+                android:id="@+id/my_web_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="250dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

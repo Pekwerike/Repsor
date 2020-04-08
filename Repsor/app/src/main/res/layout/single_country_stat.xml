@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+      <variable
+          name="CountryStat"
+          type="com.example.covid_19nalert.domain.CountryDomainModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/standard_view_margin"
+            android:padding="@dimen/standard_view_margin"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="@dimen/default_card_elevation"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/country_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/standard_view_margin"
+                    android:fontFamily="monospace"
+                    android:padding="@dimen/standard_view_padding"
+                    android:text="@{CountryStat.country}"
+                    android:textColor="@android:color/black"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/total_cases"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/standard_view_margin"
+                    android:padding="@dimen/standard_view_padding"
+                    android:text="@{CountryStat.totalConfirmed}"
+                    android:textColor="@android:color/black"
+                    android:textSize="17sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/country_name" />
+
+                <TextView
+                    android:id="@+id/total_number_of_death"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/standard_view_margin"
+                    android:padding="@dimen/standard_view_padding"
+                    android:text="@{CountryStat.totalDeaths}"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textSize="17sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/total_cases" />
+
+                <TextView
+                    android:id="@+id/total_number_recovered"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/standard_view_margin"
+                    android:padding="@dimen/standard_view_padding"
+                    android:text="@{CountryStat.totalRecovered}"
+                    android:textColor="@android:color/holo_green_dark"
+                    android:textSize="17sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/total_number_of_death" />
+
+                <TextView
+                    android:id="@+id/total_number_of_new_cases"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/standard_view_margin"
+                    android:layout_marginBottom="5dp"
+                    android:padding="@dimen/standard_view_padding"
+                    android:text="@{CountryStat.dailyConfirmed}"
+                    android:textColor="@android:color/holo_orange_dark"
+                    android:textSize="17sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/total_number_recovered" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

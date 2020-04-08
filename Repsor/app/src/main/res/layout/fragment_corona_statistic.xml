@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+      <variable
+          name="viewModel"
+          type="com.example.covid_19nalert.corona_statistics.CoronaStatisticViewModel" />
+    </data>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/countries_swipe_to_refresh_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".corona_statistics.CoronaStatistic">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/country_statistic_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/single_country_stat"/>
+        <ProgressBar
+            android:id="@+id/country_stat_loading_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:showProgressBar="@{viewModel.internetStatus}"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_cloud_off_black_24dp"
+            app:showNetworkError="@{viewModel.internetStatus}"/>
+
+        <TextView
+            showNetworkError="@{viewModel.internetStatus}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="80dp"
+            android:fontFamily="sans-serif-smallcaps"
+            android:text="Network error!. Refresh"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="23sp" />
+
+
+    </FrameLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</layout>

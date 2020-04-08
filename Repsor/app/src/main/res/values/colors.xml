@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#0288d1</color>
+    <color name="colorPrimaryDark">#005b9f</color>
+    <color name="colorAccent">#005b9f</color>
+    <color name="news_description_color">#616161</color>
+    <color name="news_title">#000000</color>
+    <color name="dangerCon">#ff1744</color>
+    <color name="Srz">#ffc107</color>
+    <color name="notToSrz">#ffeb3b</color>
+    <color name="notSrz">#cddc39</color>
+    <color name="considerable">#9ccc65</color>
+    <color name="low">#8bc34a</color>
+    <color name="veryLowChances">#4caf50</color>
+</resources>

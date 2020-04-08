@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/homepage">
+
+    <fragment
+        android:id="@+id/caseSummary"
+        android:name="com.example.covid_19nalert.cases_summary.CaseSummary"
+        android:label="News"
+        tools:layout="@layout/fragment_case_summary">
+        <action
+            android:id="@+id/action_caseSummary_to_contentView"
+            app:destination="@id/contentView" />
+    </fragment>
+    <fragment
+        android:id="@+id/contentView"
+        android:name="com.example.covid_19nalert.cases_summary.ContentView"
+        android:label="ContentView"
+        tools:layout="@layout/fragment_content_view">
+
+        <argument
+            android:name="article"
+            app:argType="com.example.covid_19nalert.domain.NewsDomainModel"/>
+
+    </fragment>
+    <fragment
+        android:id="@+id/coronaStatistic"
+        android:name="com.example.covid_19nalert.corona_statistics.CoronaStatistic"
+        android:label="Track"
+        tools:layout="@layout/fragment_corona_statistic"/>
+    <fragment
+        android:id="@+id/learnMore"
+        android:name="com.example.covid_19nalert.learn.LearnMore"
+        android:label="Learn"
+        tools:layout="@layout/fragment_learn_more" />
+    <fragment
+        android:id="@+id/homepage"
+        android:name="com.example.covid_19nalert.homepage.Homepage"
+        android:label="REPSOR"
+        tools:layout="@layout/experiment">
+        <action
+            android:id="@+id/action_homepage_to_caseSummary"
+            app:destination="@id/caseSummary" />
+        <action
+            android:id="@+id/action_homepage_to_coronaStatistic"
+            app:destination="@id/coronaStatistic" />
+        <action
+            android:id="@+id/action_homepage_to_learnMore"
+            app:destination="@id/learnMore" />
+    </fragment>
+</navigation>

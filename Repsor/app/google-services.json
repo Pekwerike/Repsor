@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "846715734426",
+    "firebase_url": "https://repsor-a0ddb.firebaseio.com",
+    "project_id": "repsor-a0ddb",
+    "storage_bucket": "repsor-a0ddb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:846715734426:android:ab36878bd8113f3fa41223",
+        "android_client_info": {
+          "package_name": "com.example.covid_19nalert"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "846715734426-b5amh43hr6fnsf6i3odoptulu9ra9489.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.covid_19nalert",
+            "certificate_hash": "445e980ed485a3c2e329149a37f82698864c1150"
+          }
+        },
+        {
+          "client_id": "846715734426-7rsm2mhvqpuu3tt7m2kputfnpcdpsqmd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD6jEsiwTys6Ann4DJSCXf7DTLDHHnIvdQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "846715734426-7rsm2mhvqpuu3tt7m2kputfnpcdpsqmd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

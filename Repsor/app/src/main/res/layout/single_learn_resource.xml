@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+       <variable
+           name="singleLearnResource"
+           type="com.example.covid_19nalert.learn.LearnEntity" />
+    </data>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_margin="@dimen/standard_view_margin"
+            android:padding="@dimen/standard_view_padding"
+            android:id="@+id/learn_card_view"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="10dp"
+            android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/learning_resource_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/standard_view_margin"
+                        android:fontFamily="monospace"
+                        android:padding="@dimen/standard_view_padding"
+                        android:textColor="@android:color/white"
+                        android:text="@{singleLearnResource.learningResourceTitle}"
+                        android:textSize="23sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/learning_resource_description"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/white"
+                        android:layout_margin="@dimen/standard_view_margin"
+                        android:padding="@dimen/standard_view_padding"
+                        android:text="@{singleLearnResource.learningResourceShortDescription}"
+                        android:textSize="18sp" />
+                </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+</layout>

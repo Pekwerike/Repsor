@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="standard_view_margin">10dp</dimen>
+    <dimen name="standard_view_padding">3dp</dimen>
+    <dimen name="default_card_elevation">14dp</dimen>
+</resources>
