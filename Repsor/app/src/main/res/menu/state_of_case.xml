@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/current_state"
+        android:title="Current State"/>
+    <item android:id="@+id/areas_with_higher_treats"
+        android:title="Projected Impact"/>
+
+</menu>
